@@ -1,3 +1,4 @@
+import React from 'react';
 import { HistoryContainer, HistoryList, Status } from "./styles";
 
 export function History() {
