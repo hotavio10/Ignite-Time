@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Play } from 'phosphor-react'
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -45,7 +45,9 @@ export function Home() {
   })
 
   function handleCreateNewCycle(data: NewCycleFormData) {
-    const id = String(new Date().getTime())
+    const id = String(new Date().getTime(
+      
+    ))
 
     const newCycle: Cycle = {
       id,
