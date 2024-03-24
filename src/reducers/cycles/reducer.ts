@@ -30,12 +30,12 @@ export function cyclesReducer(state: CyclesState, action: any) {
       })
 
       if (currentCycleIndex < 0) {
-        return
+        return state
       }
 
       return produce(state, (draft) => {
-        draft.cycles[currentCycleIndex].interruptedDate = new Date()
         draft.activeCycleId = null
+        draft.cycles[currentCycleIndex].interruptedDate = new Date()
       })
     }
 
@@ -50,8 +50,8 @@ export function cyclesReducer(state: CyclesState, action: any) {
         }
 
         return produce(state, (draft) => {
-          draft.cycles[currentCycleIndex].finishedDate = new Date()
           draft.activeCycleId = null
+          draft.cycles[currentCycleIndex].finishedDate = new Date()
         })
       }
     }
